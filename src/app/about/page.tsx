@@ -14,20 +14,6 @@ import UnstyledButton from "@/components/buttons/UnstyledButton"
 export const metadata: Metadata = {
     title: "About",
     description: "Discover more about me as a software engineering enthusiast through my acitivities, my gears, and more!",
-    openGraph: {
-        url: "https://nmfaizz.vercel.app/about",
-        siteName: "Nur Muhammad Faiz",
-        images: [
-            {
-                url: "https://nmfaizz.vercel.app/images/nur-muhammad-faiz.JPG",
-                width: 800,
-                height: 600,
-                alt: "Nur Muhammad Faiz"
-            },
-        ],
-        locale: "en_US",
-        type: "profile",
-    }
 }
 
 export default async function AboutPage() {
@@ -131,7 +117,7 @@ export default async function AboutPage() {
 
                     <UnstyledButton
                         type="link"
-                        href="https://itsacid-my.sharepoint.com/:f:/g/personal/5053231008_student_its_ac_id/EthiYcQWzM5Lkh4NGJ0kx90BoQdpCkDLYoFMRAixG-1gsA?e=6nlnOo"
+                        href="https://itsacid-my.sharepoint.com/:b:/g/personal/5053231008_student_its_ac_id/EdT3LGCKpVVPnbIdsyg73ZYBvTmekCmY4nNGNkHGXfz8TQ?e=pZoVWm"
                         leftIcon={IoDocumentText}
                     >
                         Download CV
