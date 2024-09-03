@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .page-max-width {
+    @apply max-w-[900px] m-auto px-3 md:px-8
+  }
+
+  .page-max-width-sm {
+    @apply max-w-[700px] m-auto px-3 md:px-8
+  }
+
+  .base-border {
+    @apply border-[1px] border-main-silver
+  }
+
+  .base-border-b {
+    @apply border-b-[1px] border-b-stone-800
+  }
+
+  .base-border-t {
+    @apply border-t-[1px] border-t-stone-800
+  }
+
+  .text-size-base {
+    @apply text-[15px] lg:text-[16px]
+  }
+
+  .text-size-2xl {
+    @apply text-[30px] md:text-[36px]
+  }
+
+  .text-size-xl {
+    @apply text-[28px] md:text-[32px]
+  }
+
+  .text-size-md {
+    @apply text-[17px]
+  }
+
+  .text-size-lg {
+    @apply text-[20px]
+  }
+
+  .text-size-sm {
+    @apply text-[14px]
+  }
+
+  .transition-base {
+    @apply transition-all ease-in-out
+  }
+
+}
+
+.rich-text-style h1,
+.rich-text-style h2,
+.rich-text-style h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.rich-text-style hr {
+  background-color: #535151; 
+  height: 1px; 
+  border: 0;
+}
+
+.rich-text-style p {
+  color: #a5acb1;
+  margin-bottom: 4rem;
+}
+
+@layer base {
+  h1 {
+    @apply font-bold
+  }
+
+  h2 {
+    @apply font-bold
+  }
+
+  h3 {
+    @apply font-bold
+  }
+
+  h4 {
+    @apply font-bold
+  }
+
+  input {
+    @apply outline-none bg-transparent
+  }
+
+}
