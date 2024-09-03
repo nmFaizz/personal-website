@@ -28,7 +28,7 @@ export async function GET(req: Request) {
                 <div tw="flex items-center">
                     <figure className="">
                         <img 
-                            src="https://nmfaizz-rev3.vercel.app/images/nur-muhammad-faiz.JPG" 
+                            src="https://nmfaizz.vercel.app/images/nur-muhammad-faiz.JPG" 
                             alt="Nur Muhammad Faiz"
                             tw="w-24 h-24 rounded-full" 
                             style={{ objectFit: "cover" }}
