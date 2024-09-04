@@ -8,6 +8,7 @@ import NextImage from "@/components/NextImage"
 import { Metadata } from "next"
 
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
+import { SiGmail } from "react-icons/si"
 import { IoDocumentText } from "react-icons/io5";
 import UnstyledButton from "@/components/buttons/UnstyledButton"
 
@@ -114,6 +115,14 @@ export default async function AboutPage() {
                     <Typography>
                         Jl. Karimun No 18 GKB, Gresik, Jawa Timur.
                     </Typography>
+
+                    <UnstyledButton
+                        type="link"
+                        leftIcon={SiGmail}
+                        href="mailto:mfaiz582@gmail.com"
+                    >
+                        mfaiz582@gmail.com
+                    </UnstyledButton>
 
                     <UnstyledButton
                         type="link"

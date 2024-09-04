@@ -21,7 +21,8 @@ import {
   SiHtml5, 
   SiNextdotjs, 
   SiTailwindcss,
-  SiReact, 
+  SiReact,
+  SiGmail 
 } from "react-icons/si";
 
 import Marquee from "react-fast-marquee";
@@ -30,7 +31,7 @@ const MAX_POSTS = 3;
 
 export default async function Home() {
   function sliceData<T>(data: T[], max: number): T[] {
-    return data.length > MAX_POSTS ? data.slice(0, 3) : data;
+    return data.length > max ? data.slice(0, 3) : data;
   }
 
   const blogPosts = await getBlogPosts();
@@ -78,6 +79,16 @@ export default async function Home() {
               animatedClassName: 'fade-up',
               delay: 300
             }}>
+              <Typography className="text-main-silver">
+                Jl. Karimun No 18 GKB, Gresik, Jawa Timur, Indonesia
+              </Typography>
+            </Aos>
+
+            <Aos options={{
+              duration: 5000,
+              animatedClassName: 'fade-up',
+              delay: 400
+            }}>
               <Button
                 type="link"
                 size="lg"
@@ -90,7 +101,7 @@ export default async function Home() {
             <Aos options={{
               duration: 5000,
               animatedClassName: 'fade-up',
-              delay: 300
+              delay: 500
             }}>
               <div className="flex flex-wrap justify-center gap-5 text-main-silver text-size-sm">
                 {socials.map((social, index) => (
@@ -100,7 +111,7 @@ export default async function Home() {
                     href={social.href}
                     key={index}
                   >
-                    @{social.name}
+                    {social.name}
                   </UnstyledButton>
                 ))}
               </div>
@@ -110,7 +121,7 @@ export default async function Home() {
           <Aos options={{
             animatedClassName: 'fade-up',
             duration: 5000,
-            delay: 400
+            delay: 600
           }}>
             <div className="flex justify-center overflow-hidden">
               <div className="flex justify-center gap-2 md:gap-4 w-[1200px]">
@@ -170,19 +181,24 @@ export default async function Home() {
 
 const socials = [
   {
-      name: "nmfaizz",
+      name: "@nmfaizz",
       icon: FaLinkedin,
       href: "https://www.linkedin.com/in/nmfaizz"
   },
   {
-      name: "nmfaizz__",
+      name: "@nmfaizz__",
       icon: FaInstagram,
       href: "https://www.instagram.com/nmfaizz__" 
   },
   {
-      name: "nmFaizz",
+      name: "@nmFaizz",
       icon: FaGithub,
       href: "https://www.github.com/nmFaizz"
+  }, 
+  {
+      name: "gmail",
+      icon: SiGmail,
+      href: "mailto:mfaiz582@gmail.com"
   }
 ]
 
@@ -198,7 +214,7 @@ const heroImages = [
   {
     src: "/images/unsplash-abstract-2.jpg",
     alt: "Abstract art"
-  }
+  },
 ]
 
 const stacks = [
