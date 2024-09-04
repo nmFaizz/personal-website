@@ -24,6 +24,7 @@ import {
   SiReact,
   SiGmail 
 } from "react-icons/si";
+import { IoDocumentText } from "react-icons/io5";
 
 import Marquee from "react-fast-marquee";
 
@@ -89,6 +90,21 @@ export default async function Home() {
               animatedClassName: 'fade-up',
               delay: 400
             }}>
+              
+              <UnstyledButton
+                  type="link"
+                  href="https://itsacid-my.sharepoint.com/:b:/g/personal/5053231008_student_its_ac_id/EdT3LGCKpVVPnbIdsyg73ZYBvTmekCmY4nNGNkHGXfz8TQ?e=pZoVWm"
+                  leftIcon={IoDocumentText}
+              >
+                  Download CV
+              </UnstyledButton>
+            </Aos>
+
+            <Aos options={{
+              duration: 5000,
+              animatedClassName: 'fade-up',
+              delay: 500
+            }}>
               <Button
                 type="link"
                 size="lg"
@@ -101,7 +117,7 @@ export default async function Home() {
             <Aos options={{
               duration: 5000,
               animatedClassName: 'fade-up',
-              delay: 500
+              delay: 600
             }}>
               <div className="flex flex-wrap justify-center gap-5 text-main-silver text-size-sm">
                 {socials.map((social, index) => (
@@ -121,7 +137,7 @@ export default async function Home() {
           <Aos options={{
             animatedClassName: 'fade-up',
             duration: 5000,
-            delay: 600
+            delay: 700
           }}>
             <div className="flex justify-center overflow-hidden">
               <div className="flex justify-center gap-2 md:gap-4 w-[1200px]">
@@ -196,7 +212,7 @@ const socials = [
       href: "https://www.github.com/nmFaizz"
   }, 
   {
-      name: "gmail",
+      name: "Gmail",
       icon: SiGmail,
       href: "mailto:mfaiz582@gmail.com"
   }

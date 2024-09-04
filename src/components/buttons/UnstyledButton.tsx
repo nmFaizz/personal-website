@@ -40,9 +40,9 @@ export default function UnstyledButton({
                 className={classes}
                 {...rest}
             >
-                {RightIcon && <RightIcon />}
-                {children}
                 {LeftIcon && <LeftIcon />}
+                {children}
+                {RightIcon && <RightIcon />}
             </button>
         )
     } else {    
