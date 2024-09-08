@@ -7,8 +7,8 @@ import Aos from "@/components/AOS";
 import UnstyledButton from "@/components/buttons/UnstyledButton";
 import NextImage from "@/components/NextImage";
 
-import { BlogPost, getBlogPosts } from "@/contentful/blogPosts";
-import { getProjectsPosts } from "@/contentful/projectsPosts";
+import { BlogPost, getBlogPosts, getLatestPost } from "@/contentful/blogPosts";
+import { getLatestProjects, getProjectsPosts } from "@/contentful/projectsPosts";
 
 import { 
   FaLinkedin, 
@@ -31,14 +31,9 @@ import Marquee from "react-fast-marquee";
 const MAX_POSTS = 3;
 
 export default async function Home() {
-  function sliceData<T>(data: T[], max: number): T[] {
-    return data.length > max ? data.slice(0, 3) : data;
-  }
+  const blogPosts = await getLatestPost(MAX_POSTS);
+  const projectsData = await getLatestProjects(MAX_POSTS);
 
-  const blogPosts = await getBlogPosts();
-  const slicedBlogPosts = await sliceData(blogPosts, MAX_POSTS);
-  const projectsData = await getProjectsPosts();
-  const slicedProjects = await sliceData(projectsData, MAX_POSTS);
   
   return (
     <>
@@ -176,7 +171,7 @@ export default async function Home() {
           subtitle="I write about tech, hobbies and thoughts."
           type="articles"
         >
-          {slicedBlogPosts.map((post: BlogPost, i) =>
+          {blogPosts.map((post: BlogPost, i) =>
             <BlogCard key={i} {...post} />
           )}
         </ContentCardList>
@@ -186,7 +181,7 @@ export default async function Home() {
           subtitle="Selected projects that I've worked on."
           type="projects"
         >
-          {slicedProjects.map((project, i) => (
+          {projectsData.map((project, i) => (
             <ProjectCardItem key={i} {...project} />
           ))}
         </ContentCardList>

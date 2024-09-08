@@ -55,3 +55,9 @@ export async function getProjectPost({ slugParams }: { slugParams: string}): Pro
         deployUrl: deployUrl as string
     }
 }
+
+export async function getLatestProjects(MAX_PROJECTS: number): Promise<ProjectPost[]> {
+    const projects = await getProjectsPosts()
+
+    return projects.slice(0, 3)
+}   
