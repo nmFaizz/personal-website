@@ -44,11 +44,11 @@ export default async function RichText({
             },
             [BLOCKS.EMBEDDED_ENTRY]: (node: NodeData) => {
                 if (node.data.target.sys.contentType.sys.id === "code") {
-                    const { code } = node.data.target.fields;
+                    const { code, language } = node.data.target.fields;
                     return (
                         <div className="rounded-md overflow-hidden">
                             <ReactSyntaxHighlighter 
-                                language="javascript" 
+                                language={language || "javascript"}
                                 style={atomOneDark}
                                 showLineNumbers
                                 customStyle={{

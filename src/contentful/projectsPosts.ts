@@ -59,5 +59,5 @@ export async function getProjectPost({ slugParams }: { slugParams: string}): Pro
 export async function getLatestProjects(MAX_PROJECTS: number): Promise<ProjectPost[]> {
     const projects = await getProjectsPosts()
 
-    return projects.slice(0, 3)
+    return projects.slice(0, MAX_PROJECTS)
 }   
