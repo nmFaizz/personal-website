@@ -7,8 +7,8 @@ import Aos from "@/components/AOS";
 import UnstyledButton from "@/components/buttons/UnstyledButton";
 import NextImage from "@/components/NextImage";
 
-import { BlogPost, getBlogPosts, getLatestPost } from "@/contentful/blogPosts";
-import { getLatestProjects, getProjectsPosts } from "@/contentful/projectsPosts";
+import { BlogPost, getLatestPost } from "@/contentful/blogPosts";
+import { getLatestProjects } from "@/contentful/projectsPosts";
 
 import { 
   FaLinkedin, 
