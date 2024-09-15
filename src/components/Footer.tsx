@@ -1,5 +1,4 @@
 import Typography from "./Typography"
-import { navs } from "./NavigationBar"
 
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
 
@@ -8,7 +7,7 @@ import Link from "next/link"
 export default function Footer() {
     return (
         <footer className="page-max-width">
-            <div className="flex items-center gap-3 base-border-t w-full py-8">
+            <div className="flex md:items-center flex-col md:flex-row gap-3 base-border-t w-full py-8">
                 <div className="flex flex-wrap gap-2">
                     {socialMedia.map(({ username, link, icon }) => (
                         <Link 
