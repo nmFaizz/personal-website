@@ -1,15 +1,3 @@
-import Typography from "@/components/Typography";
-import BlogCard from "@/components/containers/blog/BlogCardItem";
-import ContentCardList from "@/components/containers/ContentCardList";
-import ProjectCardItem from "@/components/containers/projects/ProjectCardItem";
-import Button from "@/components/buttons/Button";
-import Aos from "@/components/AOS";
-import UnstyledButton from "@/components/buttons/UnstyledButton";
-import NextImage from "@/components/NextImage";
-
-import { BlogPost, getLatestPost } from "@/contentful/blogPosts";
-import { getLatestProjects } from "@/contentful/projectsPosts";
-
 import { 
   FaLinkedin, 
   FaInstagram, 
@@ -24,9 +12,19 @@ import {
   SiReact,
   SiGmail 
 } from "react-icons/si";
-import { IoDocumentText } from "react-icons/io5";
-
 import Marquee from "react-fast-marquee";
+
+import { BlogPost, getLatestPost } from "@/contentful/blogPosts";
+import { getLatestProjects } from "@/contentful/projectsPosts";
+
+import Typography from "@/components/Typography";
+import BlogCard from "@/components/containers/blog/BlogCardItem";
+import ContentCardList from "@/components/containers/ContentCardList";
+import ProjectCardItem from "@/components/containers/projects/ProjectCardItem";
+import Button from "@/components/buttons/Button";
+import Aos from "@/components/AOS";
+import UnstyledButton from "@/components/buttons/UnstyledButton";
+import NextImage from "@/components/NextImage";
 
 const MAX_POSTS = 3;
 
@@ -68,31 +66,6 @@ export default async function Home() {
                 A Learner who&apos;s diving deep into software development. 
                 Everyday at least 1% working with React and Typescript.
               </Typography>
-            </Aos>
-
-            <Aos options={{
-              duration: 5000,
-              animatedClassName: 'fade-up',
-              delay: 300
-            }}>
-              <Typography className="text-main-silver">
-                Jl. Karimun No 18 GKB, Gresik, Jawa Timur, Indonesia
-              </Typography>
-            </Aos>
-
-            <Aos options={{
-              duration: 5000,
-              animatedClassName: 'fade-up',
-              delay: 400
-            }}>
-              
-              <UnstyledButton
-                  type="link"
-                  href="https://itsacid-my.sharepoint.com/:b:/g/personal/5053231008_student_its_ac_id/EdT3LGCKpVVPnbIdsyg73ZYBvTmekCmY4nNGNkHGXfz8TQ?e=pZoVWm"
-                  leftIcon={IoDocumentText}
-              >
-                  Download CV
-              </UnstyledButton>
             </Aos>
 
             <Aos options={{

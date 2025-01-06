@@ -1,7 +1,3 @@
-import { FaReact } from "react-icons/fa"
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiNextdotjs, SiVisualstudiocode, SiTypescript } from "react-icons/si";
-
 export default function TechstackList() {
     return (
         <ul className="mt-5 gap-4 items-center">
@@ -14,12 +10,7 @@ export default function TechstackList() {
     )
 }
 
-type TechstackData = {
-    name: string,
-    description: string,
-}
-
-const techstackData: Array<TechstackData> = [
+const techstackData = [
     {
         name: "React.JS",
         description: "A JavaScript library for building user interfaces",

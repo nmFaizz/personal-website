@@ -2,7 +2,7 @@ import Typography from "@/components/Typography"
 
 export default function ActivitiesList() {
     return (
-        <div className="">
+        <div>
             {activitiesData.map((activity, index) => (
                 <div className="base-border-b py-5 mt-5" key={index}>
                     <div className="flex flex-col sm:flex-row sm:justify-between">
@@ -42,15 +42,7 @@ export default function ActivitiesList() {
     )
 }
 
-type ActivitiesData = {
-    role: string,
-    institution: string,
-    date: string,
-    description: string,
-    list?: Array<string> 
-}
-
-const activitiesData: Array<ActivitiesData> = [
+const activitiesData = [
     {
         role: "Marketing Team",
         institution: "Flexoo Software House HMTC",

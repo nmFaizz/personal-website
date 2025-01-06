@@ -50,7 +50,7 @@ export async function getBlogPost({ slugParams }: { slugParams: string }): Promi
     }
 }
 
-export async function getLatestPost(MAX_POSTS: number): Promise<BlogPost[]> {
+export async function getLatestPost(MAX_POSTS?: number): Promise<BlogPost[]> {
     const blogs = await getBlogPosts();
     
     return await blogs.slice(0, MAX_POSTS);

@@ -1,16 +1,12 @@
+import { Metadata } from "next"
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
+
 import Typography from "@/components/Typography"
 import ActivitiesList from "@/components/containers/about/ActivitiesList"
 import Button from "@/components/buttons/Button"
 import TechstackList from "@/components/containers/about/TechstackList"
 import Aos from "@/components/AOS"
 import NextImage from "@/components/NextImage"
-
-import { Metadata } from "next"
-
-import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
-import { SiGmail } from "react-icons/si"
-import { IoDocumentText } from "react-icons/io5";
-import UnstyledButton from "@/components/buttons/UnstyledButton"
 
 export const metadata: Metadata = {
     title: "About",
@@ -76,23 +72,21 @@ export default async function AboutPage() {
 
                 <div className="space-y-5 mt-12">
                     <Typography size="base" className="text-main-silver">
-                        Hello, Im Faiz. I Just started my developer journey on 2023, 
-                        and I&apos;m excited to learn more about the tech-related topics. 
-                        Currently working with React Ecosystem and Typescript. I spend my free
-                        time to learn new things and improve my skills. I never statisfied 
-                        with my skills, so ill do continous learning and become 
-                        life-long learner.
+                        Hello, I&apos;m Faiz. I started my developer journey in 2023, 
+                        and I&apos;m excited to continously learn and grow in the field of software engineering, 
+                        building scalable, maintainable, and robust applications.
                     </Typography>
 
                     <Typography className="text-main-silver">
-                        Speaking about my interest, i love to play games,
-                        reading fiction novels or article, listening to music, and code!.
-                        Game is also my part of motivation to learn programming.
+                        Beside my passion in software engineering, I also do visual design, 
+                        creating engaging content, and marketing strategy.
                     </Typography>
 
                     <Typography size="base" className="text-main-silver">
-                        I am an undergraduate Software Engineering Student at 
-                        Institut Teknologi Sepuluh Nopember (ITS).
+                        I am pursuing my bachelor degree in Software Engineering at 
+                        Institut Teknologi Sepuluh Nopember (ITS), Surabaya. 
+                        I manage to balance my academic and non academic activities, 
+                        such as joining software house, event committees, and more.
                     </Typography>
                 </div>
 
@@ -110,44 +104,6 @@ export default async function AboutPage() {
                         </Button>
                     ))}
                 </div>
-
-                <div className="flex flex-col r mt-12 text-main-silver gap-5">
-                    <Typography>
-                        Jl. Karimun No 18 GKB, Gresik, Jawa Timur.
-                    </Typography>
-
-                    <UnstyledButton
-                        type="link"
-                        leftIcon={SiGmail}
-                        href="mailto:mfaiz582@gmail.com"
-                    >
-                        mfaiz582@gmail.com
-                    </UnstyledButton>
-
-                    <UnstyledButton
-                        type="link"
-                        href="https://itsacid-my.sharepoint.com/:b:/g/personal/5053231008_student_its_ac_id/EdT3LGCKpVVPnbIdsyg73ZYBvTmekCmY4nNGNkHGXfz8TQ?e=pZoVWm"
-                        leftIcon={IoDocumentText}
-                    >
-                        Download CV
-                    </UnstyledButton>
-                </div>
-            </section>
-
-            <section>
-                <Typography size="xl" element="h1">
-                    Activities
-                </Typography>
-
-                <ActivitiesList />
-            </section>
-
-            <section>
-                <Typography size="xl" element="h1">
-                    Techstack
-                </Typography>
-
-                <TechstackList />
             </section>
         </main>
     )
