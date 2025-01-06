@@ -2,9 +2,7 @@ import { Metadata } from "next"
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa"
 
 import Typography from "@/components/Typography"
-import ActivitiesList from "@/components/containers/about/ActivitiesList"
 import Button from "@/components/buttons/Button"
-import TechstackList from "@/components/containers/about/TechstackList"
 import Aos from "@/components/AOS"
 import NextImage from "@/components/NextImage"
 

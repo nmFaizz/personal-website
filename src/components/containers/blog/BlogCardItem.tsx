@@ -27,7 +27,6 @@ export default function BlogCard({
   date,
   title,
 }: BlogCardProps) {
-
   const readingTimeFormatted = readingTime(getRichTextString(body))
 
   return (
