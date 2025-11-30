@@ -1,5 +1,5 @@
 import NotFound from "@/app/not-found"
-import { siteConfig } from "@/constant/config"
+import { siteConfig, REVALIDATE_TIME } from "@/constant/config"
 
 import Typography from "@/components/Typography"
 import NextImage from "@/components/NextImage"
@@ -9,6 +9,7 @@ import { CiGlobe } from "react-icons/ci"
 import { getProjectPost } from "@/contentful/projectsPosts"
 import RichText from "@/contentful/RichText"
 
+export const revalidate = REVALIDATE_TIME
 
 export async function generateMetadata({ params }: { params: { project: string } }) {
     const project = await getProjectPost({ slugParams: params.project })

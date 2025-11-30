@@ -2,11 +2,14 @@ import ProjectsCardList from "@/components/containers/projects/ProjectsCardList"
 import Typography from "@/components/Typography"
 import Aos from "@/components/AOS"
 import { Metadata } from "next"
+import { REVALIDATE_TIME } from "@/constant/config"
 
 export const metadata: Metadata = {
     title: "Projects",
     description: "A collection of projects that I have worked on."
 }
+
+export const revalidate = REVALIDATE_TIME
 
 export default async function ProjectsPage() {
     return (
